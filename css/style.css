@@ -1,0 +1,124 @@
+/* font-family: 'Roboto', sans-serif; */
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f4f4f4;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+img{
+    display: inline-block;
+}
+a{
+    text-decoration: none;
+}
+
+.container{
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+    padding-top: 60px;
+    padding-bottom: 60px; 
+}
+.test__inner{
+    display: flex;
+    justify-content: space-between; 
+
+}
+.cards--holder{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.cards--holder .main__card{
+    margin-bottom: 30px;
+}
+.main{
+    width: 870px;
+    
+}
+.saidbar{
+    width: 270px;
+}
+
+/*start cards*/
+.main__card{
+    position: relative;
+    width: 270px;
+    background-color: #fff;
+}
+a.card__link{
+    display: inline-block;
+    transition: all 0.2 ease-in;
+}
+a.card__link:hover{
+    opacity: 0.8;
+    transform: translateY(-5px);
+}
+.card__badges{
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    right: 15px;
+    display: flex;
+
+}
+.card__badges > * + *{
+    margin-left: 10px;
+}
+.card__badge{
+    display: inline-block;
+    background: #777;
+    border-radius: 4px;
+    height: 22px;
+    padding: 0 10px;
+    font-size: 14px;
+    line-height: 22px;
+    color: #000;
+}
+.card__badge--long{
+    background-color: #ffcf26;
+}
+.card__badge--expensive{
+    background-color: #11be75;
+}
+
+.card__content{
+    padding: 15px 15px 20px;
+}
+.card__image img{
+    width: 270px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.card__content-title{
+    margin: 0;
+    margin-bottom: 10px;
+    color: #000;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 700;
+
+}
+.card__content-term{
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000;
+}
+.card__content-metro{
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000; 
+}
+.card__content-addres{ 
+    font-size: 14px;
+    line-height: 16px;
+    color: #777; 
+}
+
+/*end cards*/
