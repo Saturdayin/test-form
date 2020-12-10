@@ -276,3 +276,136 @@ a.card__link:hover{
 }
 
 /* end radio */
+/* start checkbox */
+.checkbox{
+    display: block;
+    cursor: pointer;
+}
+
+.checkbox + .checkbox{
+    margin-top: 15px;
+}
+
+.checkbox__rial{
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    opacity: 0;
+    appearance: none;
+}
+.checkbox__fake{
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #777777;
+    background-color: transparent;
+    border-radius: 2px;
+    margin-right: 10px;
+    vertical-align: bottom;
+}
+.checkbox__rial:checked + .checkbox__fake{
+    background-color: #efe074;
+}
+.checkbox__rial:checked + .checkbox__fake::before{
+    content: "";
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    background-image: url(../images/check.svg);
+    background-size:  initial;
+    background-position: center;
+}
+
+.checkbox__title{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000;
+}
+.checkbox__rial:checked ~ .checkbox__title{
+    font-weight: 700;
+}
+.widget__hidden{
+    display: none;
+}
+.widget__show-hiden {
+    background: transparent;
+    border: none;
+    display: inline-block;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 19px;
+    color: #4290c9;
+    cursor: pointer;
+    transition: opacity 0.2s ease-in;
+    padding: 0;
+
+}
+.widget__show-hiden:hover{
+    opacity: 0.8;
+    text-decoration: underline;
+}
+.widget__hidden + .widget__show-hiden{
+    margin-top: 15px;
+}
+
+/* end checkbox */
+
+/* toggle */
+
+.toggle {
+    cursor: pointer;
+}
+.toggle__rial {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    opacity: 0;
+    appearance: none;
+}
+.toggle__fake {
+    display: inline-block;
+    width: 37px;
+    height: 20px;
+    background-color: #c4c4c4;
+    border-radius: 10px;
+    position: relative;
+    vertical-align: bottom;
+    margin-right: 10px;
+     
+}
+.toggle__fake::before{
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-color: #3c3c3c;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: all 0.2s ease-in;
+}
+.toggle__rial:checked + .toggle__fake{
+    background-color: #ffe074;
+
+}
+.toggle__rial:checked + .toggle__fake::before{
+    left: 19px;
+    /*right: 2px;*/
+}
+.toggle__title{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000;
+}
+.toggle__rial:checked ~ .toggle__title{
+    font-weight: 700;
+}
+/* //toggle */
+
+
