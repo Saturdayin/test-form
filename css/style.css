@@ -16,11 +16,19 @@ a{
 }
 
 .container{
-    max-width: 1170px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px;
-    padding-top: 60px;
-    padding-bottom: 60px; 
+    padding: 60px 15px;
+}
+@media (max-width: 1200px){
+    .container{
+        max-width: 830px;
+    }
+}
+@media (max-width: 829px){
+    .container{
+        max-width: 600px;
+    }
 }
 .test__inner{
     display: flex;
@@ -32,6 +40,12 @@ a{
     justify-content: space-between;
     flex-wrap: wrap;
 }
+@media (max-width: 599px){
+    .cards--holder{
+        flex-direction: column;
+        align-items: center;
+    }
+}
 .cards--holder .main__card{
     margin-bottom: 30px;
 }
@@ -40,7 +54,27 @@ a{
     
 }
 .saidbar{
+    min-width: 200px;
     width: 270px;
+
+}
+@media (max-width: 829px){
+    .saidbar{
+        /* display: none; */
+        margin: 0 !important;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background-color: #fff;
+        padding: 15px;
+        box-shadow: 0px 0px 20px 4px rgb(0 0 0 / 37%);
+        overflow-y: scroll;
+        transform: translateX(-150%);
+    }
+}
+.main +.saidbar{
+    margin-left: 30px;
 }
 
 /*start cards*/
@@ -143,8 +177,8 @@ a.card__link:hover{
 
 /* start saidbar */
 .saidbar{
-    padding-left: 20px;
-}
+    /* padding-left: 20px;*/
+} 
 .widget + .widget{
     margin-top: 30px;
 }
@@ -408,4 +442,60 @@ a.card__link:hover{
 }
 /* //toggle */
 
+/* form buttons*/
 
+.form-btn{
+    width: 100%;
+    font-family: inherit;
+    height: 50px;
+    background-color: transparent;
+    text-align: center;
+    border: 1px solid #d6d6d6;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #3c3c3c;
+    transition: background-color 0.3s ease-in;
+}
+
+.form-btn + .form-btn{
+    margin-top: 10px;
+}
+.form-btn:hover{
+    background-color: #dfdfdf;
+}
+.form-btn--submit{
+    background-color: #ffcf26;
+    border: none;
+    color: #000;
+}
+.form-btn--submit:hover{
+    background-color: #ffe173;
+}
+
+
+/* //form buttons*/
+
+/* button toggle saidbar */
+.toggle-saidbar{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 30px;
+    height: 30px;
+    /* background-color: #ffcf26; */
+    border: none;
+    padding: 0;
+}
+.menu-icon{
+    width: 30px;
+    height: 5px;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    position: absolute;
+
+}
+.menu-icon + .menu-icon{ 
+    margin-top: 10px;
+}
